@@ -1,14 +1,13 @@
 "use client";
-import Image from "next/image";
-import Delay from "./dm-delay/page";
-import MoodMail from "./moodMail/page";
-import { useState } from "react";
+
+import TimeTacker from "./timeTracker/page";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="flex min-h-svh flex-col items-center justify-center ">
       {/* <Delay /> */}
-      <MoodMail />
+      {/* <MoodMail /> */}
+      <TimeTacker />
     </div>
   );
 }
