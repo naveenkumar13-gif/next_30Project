@@ -30,5 +30,15 @@ export default function TimeChart({ data }: Props) {
       },
     ],
   };
-  return <div>{data ? <Pie data={ChartData} /> : <div> no data</div>}</div>;
+  return (
+    <div>
+      {data && data.length > 0 ? (
+        <Pie data={ChartData} />
+      ) : (
+        <div style={{ color: "#888", fontStyle: "italic", padding: "1rem" }}>
+          No data available.
+        </div>
+      )}
+    </div>
+  );
 }
